@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
   View,
-  ViewStyle,
   Text,
-  TextStyle,
   TextInput,
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { ViewPropTypes } from "deprecated-react-native-prop-types";
 
 const s = StyleSheet.create({
   baseInputStyle: {
@@ -26,9 +25,9 @@ export default class CCInput extends Component {
 
     status: PropTypes.oneOf(["valid", "invalid", "incomplete"]),
 
-    containerStyle: PropTypes.shape(ViewStyle),
-    inputStyle: PropTypes.shape(TextStyle),
-    labelStyle: PropTypes.shape(TextStyle),
+    containerStyle: ViewPropTypes.style,
+    inputStyle: Text.propTypes.style,
+    labelStyle: Text.propTypes.style,
     validColor: PropTypes.string,
     invalidColor: PropTypes.string,
     placeholderColor: PropTypes.string,
