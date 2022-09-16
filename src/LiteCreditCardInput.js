@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
-  Text,
   View,
+  TextStyle,
   StyleSheet,
   Image,
   LayoutAnimation,
@@ -72,7 +72,7 @@ export default class LiteCreditCardInput extends Component {
 
     placeholders: PropTypes.object,
 
-    inputStyle: Text.propTypes.style,
+    inputStyle: PropTypes.shape(TextStyle),
 
     validColor: PropTypes.string,
     invalidColor: PropTypes.string,
