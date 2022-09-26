@@ -1,4 +1,4 @@
-declare module "react-native-credit-card-input" {
+declare module "react-native-credit-card-input-plus-cr" {
   import {
     StyleProp,
     TextInputProps,
